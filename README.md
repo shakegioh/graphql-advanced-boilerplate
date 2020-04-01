@@ -1,6 +1,6 @@
-# Graphql Prisma2 Boilerplate
+# Graphql Advanced Boilerplate
 
-A great boilerplate to start your new graphql project.
+A great boilerplate to start your new graphql project. Based on [graphql-prisma2-boilerplate](https://github.com/microenv/graphql-prisma2-boilerplate).
 
 ## Development Setup
 
@@ -33,13 +33,15 @@ See [Example Queries](./docs/ExampleQueries.md)
 - Typescript
 - Nexus (nexus-future)
 - Docker compose - Right now it's only creating a new database // @TODO ~ put this server inside a container and create a volume
+- Winston - Logger that send log entries to Elasticsearch
+- Elasticsearch - Client for Elasticsearch
 
 ## System Requirements
 
 - Node
 - Yarn (or npm)
 - Docker compose
-- A developer (did you get it?)
+- Elasticsearch
 
 ## Environment Variables
 
@@ -47,6 +49,7 @@ See [Example Queries](./docs/ExampleQueries.md)
 - `MASTERKEY`=localmasterkey
 - `PORT`=4001
 - `DB_URL`=mysql://prisma:prisma@localhost:3310/workouts
+- `ELASTICSEARCH_URL`= @TODO
 
 > @TODO ~ If you define a masterkey, then you need to send it in the header of all requests to this graphql server. More details below on Masterkey Authentication.
 
