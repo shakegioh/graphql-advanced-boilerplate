@@ -17,9 +17,15 @@
     "uninstall": "docker-compose -f config/local.yml down --remove-orphans -v && yarn clean"
   },
   "dependencies": {
+    "@log4js-node/logstashudp": "^1.2.1",
     "dotenv-cli": "^3.1.0",
+    "log4js": "^6.1.2",
     "nexus-future": "^0.12.0",
-    "nexus-plugin-prisma": "^0.5.1"
+    "nexus-plugin-prisma": "^0.5.1",
+    "winston": "^3.2.1",
+    "winston-elasticsearch": "^0.8.6",
+    "winston-logstash": "^0.4.0",
+    "winston-logstash-transport": "^2.0.0"
   },
   "devDependencies": {
     "husky": "^4.2.3",

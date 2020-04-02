@@ -1,4 +1,5 @@
-import { server, settings } from 'nexus-future';
+import { settings } from 'nexus-future';
+import logger from './util/logger';
 
 async function main() {
   const port = Number(process.env.PORT || 3500);
@@ -10,7 +11,9 @@ async function main() {
     },
   });
 
-  // console.log(`🚀 Server ready at: http://localhost:${port} ⭐️`);
+  logger.info('Graphql server started!', {
+    port,
+  });
 }
 
 main();

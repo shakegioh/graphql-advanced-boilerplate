@@ -1,4 +1,5 @@
 import { schema } from 'nexus-future';
+import logger from './util/logger';
 
 schema.mutationType({
   definition(t) {
@@ -64,6 +65,12 @@ schema.queryType({
         }),
       },
       async resolve(_, { tags }: any, ctx) {
+        logger.info({
+          schemaName: 'Query',
+          schemaField: 'todos',
+          args: { tags },
+        });
+
         const where = {
           AND: [],
         };

@@ -33,23 +33,24 @@ See [Example Queries](./docs/ExampleQueries.md)
 - Typescript
 - Nexus (nexus-future)
 - Docker compose - Right now it's only creating a new database // @TODO ~ put this server inside a container and create a volume
-- Winston - Logger that send log entries to Elasticsearch
-- Elasticsearch - Client for Elasticsearch
+- Log4js - Unified logger (You can enable Logstash in environment variables)
 
 ## System Requirements
 
 - Node
 - Yarn (or npm)
 - Docker compose
-- Elasticsearch
+- Logstash (optional)
 
 ## Environment Variables
 
 - `NODE_ENV=`local
 - `MASTERKEY`=localmasterkey
+- `APPLICATION_NAME`=Your Custom APP Name Here
 - `PORT`=4001
-- `DB_URL`=mysql://prisma:prisma@localhost:3310/workouts
-- `ELASTICSEARCH_URL`= @TODO
+- `DB_URL`=mysql://prisma:prisma@localhost:3310/my-database-name
+- `LOGSTASH_HOST`= @TODO
+- `LOGSTASH_PORT`= @TODO
 
 > @TODO ~ If you define a masterkey, then you need to send it in the header of all requests to this graphql server. More details below on Masterkey Authentication.
 
@@ -94,3 +95,4 @@ If you pass an empty tags array, then all todos are returned.
 
 - Steps to deploy in production
 - Add seed todos
+- Create .env and add logstash config there, auto-enable logstash appender if the user puts the logstash env variables.
