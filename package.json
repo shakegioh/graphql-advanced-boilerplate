@@ -19,7 +19,7 @@
   "dependencies": {
     "@log4js-node/logstashudp": "^1.2.1",
     "dotenv-cli": "^3.1.0",
-    "log4js": "^6.1.2",
+    "log4js": "^6.2.0",
     "nexus-future": "^0.12.0",
     "nexus-plugin-prisma": "^0.5.1",
     "winston": "^3.2.1",
